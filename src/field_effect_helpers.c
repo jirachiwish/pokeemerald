@@ -817,19 +817,19 @@ u32 FldEff_UnusedGrass(void)
     return 0;
 }
 
-u32 FldEff_UnusedGrass2(void)
+u32 FldEff_SnowFootprints(void)
 {
     u8 spriteId;
     struct Sprite *sprite;
 
     SetSpritePosToOffsetMapCoords((s16 *)&gFieldEffectArguments[0], (s16 *)&gFieldEffectArguments[1], 8, 8);
-    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_UNUSED_GRASS_2], gFieldEffectArguments[0], gFieldEffectArguments[1], gFieldEffectArguments[2]);
+    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_SNOW_FOOTPRINTS], gFieldEffectArguments[0], gFieldEffectArguments[1], gFieldEffectArguments[2]);
     if (spriteId != MAX_SPRITES)
     {
         sprite = &gSprites[spriteId];
         sprite->coordOffsetEnabled = TRUE;
         sprite->oam.priority = gFieldEffectArguments[3];
-        sprite->data[0] = FLDEFF_UNUSED_GRASS_2;
+        sprite->data[0] = FLDEFF_SNOW_FOOTPRINTS;
     }
     return 0;
 }
