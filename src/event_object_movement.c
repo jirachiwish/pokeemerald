@@ -8106,7 +8106,7 @@ void GroundEffect_Seaweed(struct ObjectEvent *objEvent, struct Sprite *sprite)
     FieldEffectStart(FLDEFF_BUBBLES);
 }
 
-void GroundEffect_SnowTracks(struct EventObject *objEvent, struct Sprite *sprite)
+void GroundEffect_SnowTracks(struct ObjectEvent *objEvent, struct Sprite *sprite)
 {
     const struct ObjectEventGraphicsInfo *info = GetObjectEventGraphicsInfo(objEvent->graphicsId);
     sGroundEffectTracksFuncs[info->tracks](objEvent, sprite, 2);
