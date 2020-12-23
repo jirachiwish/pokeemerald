@@ -38,6 +38,7 @@ enum SpinnerRunnerFollowPatterns
 #define GROUND_EFFECT_FLAG_SHORT_GRASS           (1 << 17)
 #define GROUND_EFFECT_FLAG_HOT_SPRINGS           (1 << 18)
 #define GROUND_EFFECT_FLAG_SEAWEED               (1 << 19)
+#define GROUND_EFFECT_FLAG_SNOW_FOOTPRINTS       (1 << 20)
 
 struct UnkStruct_085094AC
 {
