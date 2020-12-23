@@ -720,37 +720,52 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_UnusedGrass = {
     .callback = WaitFieldEffectSpriteAnim,
 };
 
-static const struct SpriteFrameImage sPicTable_UnusedGrass2[] = {
-    overworld_frame(gFieldEffectObjectPic_UnusedGrass2, 2, 2, 0),
-    overworld_frame(gFieldEffectObjectPic_UnusedGrass2, 2, 2, 1),
-    overworld_frame(gFieldEffectObjectPic_UnusedGrass2, 2, 2, 2),
-    overworld_frame(gFieldEffectObjectPic_UnusedGrass2, 2, 2, 3),
+static const struct SpriteFrameImage sPicTable_SnowFootprints[] = {
+    overworld_frame(gFieldEffectObjectPic_SandFootprints, 2, 2, 0),
+    overworld_frame(gFieldEffectObjectPic_SandFootprints, 2, 2, 1),
 };
 
-static const union AnimCmd sAnim_UnusedGrass2[] =
+static const union AnimCmd sSnowFootprintsAnim_South[] =
 {
-    ANIMCMD_FRAME(0, 4),
-    ANIMCMD_FRAME(1, 4),
-    ANIMCMD_FRAME(2, 4),
-    ANIMCMD_FRAME(3, 4),
-    ANIMCMD_FRAME(2, 4),
-    ANIMCMD_FRAME(1, 4),
-    ANIMCMD_JUMP(0),
+    ANIMCMD_FRAME(0, 1, .vFlip = TRUE),
+    ANIMCMD_END,
 };
 
-static const union AnimCmd *const sAnimTable_UnusedGrass2[] =
+static const union AnimCmd sSnowFootprintsAnim_North[] =
 {
-    sAnim_UnusedGrass2,
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
 };
 
-const struct SpriteTemplate gFieldEffectObjectTemplate_UnusedGrass2 = {
+static const union AnimCmd sSnowFootprintsAnim_West[] =
+{
+    ANIMCMD_FRAME(1, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sSnowFootprintsAnim_East[] =
+{
+    ANIMCMD_FRAME(1, 1, .hFlip = TRUE),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sAnimTable_SnowFootprints[] =
+{
+    sSnowFootprintsAnim_South,
+    sSnowFootprintsAnim_South,
+    sSnowFootprintsAnim_North,
+    sSnowFootprintsAnim_West,
+    sSnowFootprintsAnim_East,
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_SnowFootprints = {
     .tileTag = 0xFFFF,
-    .paletteTag = FLDEFF_PAL_TAG_GENERAL_1,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_0,
     .oam = &gObjectEventBaseOam_16x16,
-    .anims = sAnimTable_UnusedGrass2,
-    .images = sPicTable_UnusedGrass2,
+    .anims = sAnimTable_SnowFootprints,
+    .images = sPicTable_SnowFootprints,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = WaitFieldEffectSpriteAnim,
+    .callback = UpdateFootprintsTireTracksFieldEffect,
 };
 
 static const struct SpriteFrameImage sPicTable_UnusedSand[] = {
