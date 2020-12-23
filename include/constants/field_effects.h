@@ -21,7 +21,7 @@
 #define FLDEFF_LONG_GRASS                17
 #define FLDEFF_JUMP_LONG_GRASS           18
 #define FLDEFF_UNUSED_GRASS              19
-#define FLDEFF_UNUSED_GRASS_2            20
+#define FLDEFF_SNOW_FOOTPRINTS           20
 #define FLDEFF_UNUSED_SAND               21
 #define FLDEFF_WATER_SURFACING           22
 #define FLDEFF_BERRY_TREE_GROWTH_SPARKLE 23
@@ -87,7 +87,7 @@
 #define FLDEFFOBJ_LONG_GRASS            15
 #define FLDEFFOBJ_JUMP_LONG_GRASS       16
 #define FLDEFFOBJ_UNUSED_GRASS          17
-#define FLDEFFOBJ_UNUSED_GRASS_2        18
+#define FLDEFFOBJ_SNOW_FOOTPRINTS       18
 #define FLDEFFOBJ_UNUSED_SAND           19
 #define FLDEFFOBJ_WATER_SURFACING       20
 #define FLDEFFOBJ_REFLECTION_DISTORTION 21
