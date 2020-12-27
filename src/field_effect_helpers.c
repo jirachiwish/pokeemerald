@@ -829,9 +829,10 @@ u32 FldEff_SnowFootprints(void)
         sprite = &gSprites[spriteId];
         sprite->coordOffsetEnabled = TRUE;
         sprite->oam.priority = gFieldEffectArguments[3];
-        sprite->data[0] = FLDEFF_SNOW_FOOTPRINTS;
+        sprite->data[7] = FLDEFF_SNOW_FOOTPRINTS;
+        StartSpriteAnim(sprite, gFieldEffectArguments[4]);
     }
-    return 0;
+    return spriteId;
 }
 
 u32 FldEff_UnusedSand(void)
