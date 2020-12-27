@@ -7551,7 +7551,7 @@ static void GetGroundEffectFlags_Tracks(struct ObjectEvent *objEvent, u32 *flags
     {
         *flags |= GROUND_EFFECT_FLAG_DEEP_SAND;
     }
-      else if (MetatileBehavior_IsSnowFootprints(objEvent->previousMetatileBehavior))
+    else if (MetatileBehavior_IsSnowFootprints(objEvent->previousMetatileBehavior))
     {
         *flags |= GROUND_EFFECT_FLAG_SNOW_FOOTPRINTS;
     }     
