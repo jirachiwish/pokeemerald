@@ -692,7 +692,7 @@ static const union AnimCmd sBikeTireSnowTracksAnim_South[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sBikeTireSnowTrackssAnim_North[] =
+static const union AnimCmd sBikeTireSnowTracksAnim_North[] =
 {
     ANIMCMD_FRAME(2, 1),
     ANIMCMD_END,
