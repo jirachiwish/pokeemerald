@@ -8005,6 +8005,11 @@ static void DoTracksGroundEffect_BikeTireTracks(struct ObjectEvent *objEvent, st
         6, 7, 3, 4,
     };
 
+    u16 bikeTireTracks_FieldEffectData[2] = {
+        FLDEFF_BIKE_TIRE_TRACKS,
+        FLDEFF_BIKE_TIRE_SNOW_TRACKS       
+    };
+    
     if (objEvent->currentCoords.x != objEvent->previousCoords.x || objEvent->currentCoords.y != objEvent->previousCoords.y)
     {
         gFieldEffectArguments[0] = objEvent->previousCoords.x;
@@ -8013,7 +8018,7 @@ static void DoTracksGroundEffect_BikeTireTracks(struct ObjectEvent *objEvent, st
         gFieldEffectArguments[3] = 2;
         gFieldEffectArguments[4] =
             bikeTireTracks_Transitions[objEvent->previousMovementDirection][objEvent->facingDirection - 5];
-        FieldEffectStart(FLDEFF_BIKE_TIRE_TRACKS);
+        FieldEffectStart(bikeTireTracks_FieldEffectData[a]);
     }
 }
 
