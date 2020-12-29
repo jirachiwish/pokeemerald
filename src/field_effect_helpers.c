@@ -800,21 +800,22 @@ void UpdateHotSpringsWaterFieldEffect(struct Sprite *sprite)
     }
 }
 
-u32 FldEff_UnusedGrass(void)
+u32 FldEff_BikeTireSnowTracks(void)
 {
     u8 spriteId;
     struct Sprite *sprite;
 
     SetSpritePosToOffsetMapCoords((s16 *)&gFieldEffectArguments[0], (s16 *)&gFieldEffectArguments[1], 8, 8);
-    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_UNUSED_GRASS], gFieldEffectArguments[0], gFieldEffectArguments[1], gFieldEffectArguments[2]);
+    spriteId = CreateSpriteAtEnd(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_BIKE_TIRE_SNOW_TRACKS], gFieldEffectArguments[0], gFieldEffectArguments[1], gFieldEffectArguments[2]);
     if (spriteId != MAX_SPRITES)
     {
         sprite = &gSprites[spriteId];
         sprite->coordOffsetEnabled = TRUE;
         sprite->oam.priority = gFieldEffectArguments[3];
-        sprite->data[0] = FLDEFF_UNUSED_GRASS;
+        sprite->data[7] = FLDEFF_BIKE_TIRE_SNOW_TRACKS;
+        StartSpriteAnim(sprite, gFieldEffectArguments[4]);
     }
-    return 0;
+    return spriteId;
 }
 
 u32 FldEff_SnowFootprints(void)
