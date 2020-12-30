@@ -17,7 +17,7 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_LongGrass;
 const struct SpriteTemplate gFieldEffectObjectTemplate_JumpLongGrass;
 const struct SpriteTemplate gFieldEffectObjectTemplate_BikeTireSnowTracks;
 const struct SpriteTemplate gFieldEffectObjectTemplate_SnowFootprints;
-const struct SpriteTemplate gFieldEffectObjectTemplate_UnusedSand;
+const struct SpriteTemplate gFieldEffectObjectTemplate_BikeTireDeseTracks;
 const struct SpriteTemplate gFieldEffectObjectTemplate_WaterSurfacing;
 const struct SpriteTemplate gFieldEffectObjectTemplate_ReflectionDistortion;
 const struct SpriteTemplate gFieldEffectObjectTemplate_Sparkle;
@@ -56,7 +56,7 @@ const struct SpriteTemplate *const gFieldEffectObjectTemplatePointers[] = {
     [FLDEFFOBJ_JUMP_LONG_GRASS]       = &gFieldEffectObjectTemplate_JumpLongGrass,
     [FLDEFFOBJ_BIKE_TIRE_SNOW_TRACKS] = &gFieldEffectObjectTemplate_BikeTireSnowTracks,
     [FLDEFFOBJ_SNOW_FOOTPRINTS]       = &gFieldEffectObjectTemplate_SnowFootprints,
-    [FLDEFFOBJ_UNUSED_SAND]           = &gFieldEffectObjectTemplate_UnusedSand,
+    [FLDEFFOBJ_BIKE_TIRE_DESE_TRACKS] = &gFieldEffectObjectTemplate_BikeTireDeseTracks,
     [FLDEFFOBJ_WATER_SURFACING]       = &gFieldEffectObjectTemplate_WaterSurfacing,
     [FLDEFFOBJ_REFLECTION_DISTORTION] = &gFieldEffectObjectTemplate_ReflectionDistortion,
     [FLDEFFOBJ_SPARKLE]               = &gFieldEffectObjectTemplate_Sparkle,
