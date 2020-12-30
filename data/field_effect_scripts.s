@@ -26,7 +26,7 @@ gFieldEffectScriptPointers:: @ 82DB9D4
 	.4byte gFieldEffectScript_JumpLongGrass             @ FLDEFF_JUMP_LONG_GRASS
 	.4byte gFieldEffectScript_BikeTireSnowTracks        @ FLDEFF_BIKE_TIRE_SNOW_TRACKS
 	.4byte gFieldEffectScript_SnowFootprints            @ FLDEFF_SNOW_FOOTPRINTS
-	.4byte gFieldEffectScript_UnusedSand                @ FLDEFF_UNUSED_SAND
+	.4byte gFieldEffectScript_BikeTireDeseTracks        @ FLDEFF_BIKE_TIRE_DESE_TRACKS
 	.4byte gFieldEffectScript_WaterSurfacing            @ FLDEFF_WATER_SURFACING
 	.4byte gFieldEffectScript_BerryTreeGrowthSparkle    @ FLDEFF_BERRY_TREE_GROWTH_SPARKLE
 	.4byte gFieldEffectScript_DeepSandFootprints        @ FLDEFF_DEEP_SAND_FOOTPRINTS
@@ -157,8 +157,8 @@ gFieldEffectScript_SnowFootprints:: @ 82DBB88
 	field_eff_loadfadedpal_callnative gSpritePalette_GeneralFieldEffect1, FldEff_SnowFootprints
 	field_eff_end
 
-gFieldEffectScript_UnusedSand:: @ 82DBB92
-	field_eff_loadfadedpal_callnative gSpritePalette_GeneralFieldEffect0, FldEff_UnusedSand
+gFieldEffectScript_BikeTireDeseTracks:: @ 82DBB92
+	field_eff_loadfadedpal_callnative gSpritePalette_GeneralFieldEffect0, FldEff_BikeTireDeseTracks
 	field_eff_end
 
 gFieldEffectScript_WaterSurfacing:: @ 82DBB9C
