@@ -8005,9 +8005,10 @@ static void DoTracksGroundEffect_BikeTireTracks(struct ObjectEvent *objEvent, st
         6, 7, 3, 4,
     };
 
-    u16 bikeTireTracks_FieldEffectData[2] = {
+    u16 bikeTireTracks_FieldEffectData[3] = {
         FLDEFF_BIKE_TIRE_TRACKS,
-        FLDEFF_BIKE_TIRE_SNOW_TRACKS       
+        FLDEFF_BIKE_TIRE_TRACKS,
+        FLDEFF_BIKE_TIRE_SNOW_TRACKS
     };
     
     if (objEvent->currentCoords.x != objEvent->previousCoords.x || objEvent->currentCoords.y != objEvent->previousCoords.y)
