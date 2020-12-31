@@ -805,82 +805,35 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_SnowFootprints = {
     .callback = UpdateFootprintsTireTracksFieldEffect,
 };
 
-static const struct SpriteFrameImage sPicTable_BikeTireDeseTracks[] = {
-    overworld_frame(gFieldEffectObjectPic_BikeTireTracks, 2, 2, 0),
-    overworld_frame(gFieldEffectObjectPic_BikeTireTracks, 2, 2, 1),
-    overworld_frame(gFieldEffectObjectPic_BikeTireTracks, 2, 2, 2),
-    overworld_frame(gFieldEffectObjectPic_BikeTireTracks, 2, 2, 3),
+static const struct SpriteFrameImage sPicTable_UnusedSand[] = {
+    overworld_frame(gFieldEffectObjectPic_UnusedSand, 2, 2, 0),
+    overworld_frame(gFieldEffectObjectPic_UnusedSand, 2, 2, 1),
+    overworld_frame(gFieldEffectObjectPic_UnusedSand, 2, 2, 2),
+    overworld_frame(gFieldEffectObjectPic_UnusedSand, 2, 2, 3),
 };
 
-static const union AnimCmd sBikeTireDeseTracksAnim_South[] =
+static const union AnimCmd sAnim_UnusedSand[] =
 {
-    ANIMCMD_FRAME(2, 1),
-    ANIMCMD_END,
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_FRAME(1, 4),
+    ANIMCMD_FRAME(2, 4),
+    ANIMCMD_FRAME(3, 4),
+    ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd sBikeTireDeseTracksAnim_North[] =
+static const union AnimCmd *const sAnimTable_UnusedSand[] =
 {
-    ANIMCMD_FRAME(2, 1),
-    ANIMCMD_END,
+    sAnim_UnusedSand,
 };
 
-static const union AnimCmd sBikeTireDeseTracksAnim_West[] =
-{
-    ANIMCMD_FRAME(1, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sBikeTireDeseTracksAnim_East[] =
-{
-    ANIMCMD_FRAME(1, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sBikeTireDeseTracksAnim_SECornerTurn[] =
-{
-    ANIMCMD_FRAME(0, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sBikeTireDeseTracksAnim_SWCornerTurn[] =
-{
-    ANIMCMD_FRAME(0, 1, .hFlip = TRUE),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sBikeTireDeseTracksAnim_NWCornerTurn[] =
-{
-    ANIMCMD_FRAME(3, 1, .hFlip = TRUE),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd sBikeTireDeseTracksAnim_NECornerTurn[] =
-{
-    ANIMCMD_FRAME(3, 1),
-    ANIMCMD_END,
-};
-
-static const union AnimCmd *const sAnimTable_BikeTireDeseTracks[] =
-{
-    sBikeTireDeseTracksAnim_South,
-    sBikeTireDeseTracksAnim_South,
-    sBikeTireDeseTracksAnim_North,
-    sBikeTireDeseTracksAnim_West,
-    sBikeTireDeseTracksAnim_East,
-    sBikeTireDeseTracksAnim_SECornerTurn,
-    sBikeTireDeseTracksAnim_SWCornerTurn,
-    sBikeTireDeseTracksAnim_NWCornerTurn,
-    sBikeTireDeseTracksAnim_NECornerTurn,
-};
-
-const struct SpriteTemplate gFieldEffectObjectTemplate_BikeTireDeseTracks = {
+const struct SpriteTemplate gFieldEffectObjectTemplate_UnusedSand = {
     .tileTag = 0xFFFF,
     .paletteTag = FLDEFF_PAL_TAG_GENERAL_0,
     .oam = &gObjectEventBaseOam_16x16,
-    .anims = sAnimTable_BikeTireDeseTracks,
-    .images = sPicTable_BikeTireDeseTracks,
+    .anims = sAnimTable_UnusedSand,
+    .images = sPicTable_UnusedSand,
     .affineAnims = gDummySpriteAffineAnimTable,
-    .callback = UpdateFootprintsTireTracksFieldEffect,
+    .callback = WaitFieldEffectSpriteAnim,
 };
 
 static const struct SpriteFrameImage sPicTable_SandPile[] = {
