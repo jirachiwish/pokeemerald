@@ -8007,7 +8007,7 @@ static void DoTracksGroundEffect_BikeTireTracks(struct ObjectEvent *objEvent, st
 
     u16 bikeTireTracks_FieldEffectData[3] = {
         FLDEFF_BIKE_TIRE_TRACKS,
-        FLDEFF_BIKE_TIRE_DESE_TRACKS,
+        FLDEFF_BIKE_TIRE_TRACKS,
         FLDEFF_BIKE_TIRE_SNOW_TRACKS
     };
     
