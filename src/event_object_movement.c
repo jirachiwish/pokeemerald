@@ -8230,7 +8230,8 @@ void filters_out_some_ground_effects(struct ObjectEvent *objEvent, u32 *flags)
                   | GROUND_EFFECT_FLAG_SHORT_GRASS
                   | GROUND_EFFECT_FLAG_SAND_PILE
                   | GROUND_EFFECT_FLAG_SHALLOW_FLOWING_WATER
-                  | GROUND_EFFECT_FLAG_TALL_GRASS_ON_MOVE);
+                  | GROUND_EFFECT_FLAG_TALL_GRASS_ON_MOVE
+                  | GROUND_EFFECT_FLAG_SNOW_GRASS_ON_MOVE);
     }
 }
 
