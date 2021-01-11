@@ -14,7 +14,7 @@ static const u8 sTileBitAttributes[] =
     [MB_SECRET_BASE_WALL] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
     [MB_TALL_GRASS] = TILE_ATTRIBUTES(TRUE, FALSE, TRUE),
     [MB_LONG_GRASS] = TILE_ATTRIBUTES(TRUE, FALSE, TRUE),
-    [MB_UNUSED_04] = TILE_ATTRIBUTES(FALSE, FALSE, FALSE),
+    [MB_SNOW_GRASS] = TILE_ATTRIBUTES(TRUE, FALSE, TRUE),
     [MB_SNOW] = TILE_ATTRIBUTES(TRUE, FALSE, FALSE),
     [MB_DEEP_SAND] = TILE_ATTRIBUTES(TRUE, FALSE, TRUE),
     [MB_SHORT_GRASS] = TILE_ATTRIBUTES(TRUE, FALSE, FALSE),
@@ -299,7 +299,7 @@ bool8 MetatileBehavior_IsJumpSouth(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsPokeGrass(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_TALL_GRASS || metatileBehavior == MB_LONG_GRASS)
+    if (metatileBehavior == MB_TALL_GRASS || metatileBehavior == MB_LONG_GRASS || metatileBehavior == MB_SNOW_GRASS)
         return TRUE;
     else
         return FALSE;
@@ -1365,6 +1365,7 @@ bool8 MetatileBehavior_IsCuttableGrass(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_TALL_GRASS
      || metatileBehavior == MB_LONG_GRASS
+     || metatileBehavior == MB_SNOW_GRASS        
      || metatileBehavior == MB_ASHGRASS
      || metatileBehavior == MB_LONG_GRASS_SOUTH_EDGE)
         return TRUE;
