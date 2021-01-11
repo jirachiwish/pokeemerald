@@ -1338,4 +1338,68 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_Rayquaza = {
     .callback = UpdateRayquazaSpotlightEffect,
 };
 
+static const struct SpriteFrameImage sPicTable_SnowGrass[] = {
+    overworld_frame(gFieldEffectObjectPic_TallGrass, 2, 2, 0),
+    overworld_frame(gFieldEffectObjectPic_TallGrass, 2, 2, 1),
+    overworld_frame(gFieldEffectObjectPic_TallGrass, 2, 2, 2),
+    overworld_frame(gFieldEffectObjectPic_TallGrass, 2, 2, 3),
+    overworld_frame(gFieldEffectObjectPic_TallGrass, 2, 2, 4),
+};
+
+static const union AnimCmd sAnim_SnowGrass[] =
+{
+    ANIMCMD_FRAME(1, 10),
+    ANIMCMD_FRAME(2, 10),
+    ANIMCMD_FRAME(3, 10),
+    ANIMCMD_FRAME(4, 10),
+    ANIMCMD_FRAME(0, 10),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sAnimTable_SnowGrass[] =
+{
+    sAnim_SnowGrass,
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_SnowGrass = {
+    .tileTag = 0xFFFF,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_1,
+    .oam = &gObjectEventBaseOam_16x16,
+    .anims = sAnimTable_SnowGrass,
+    .images = sPicTable_SnowGrass,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = UpdateSnowGrassFieldEffect,
+};
+
+static const struct SpriteFrameImage sPicTable_JumpSnowGrass[] = {
+    overworld_frame(gFieldEffectObjectPic_JumpTallGrass, 2, 1, 0),
+    overworld_frame(gFieldEffectObjectPic_JumpTallGrass, 2, 1, 1),
+    overworld_frame(gFieldEffectObjectPic_JumpTallGrass, 2, 1, 2),
+    overworld_frame(gFieldEffectObjectPic_JumpTallGrass, 2, 1, 3),
+};
+
+static const union AnimCmd sAnim_JumpSnowGrass[] =
+{
+    ANIMCMD_FRAME(0, 8),
+    ANIMCMD_FRAME(1, 8),
+    ANIMCMD_FRAME(2, 8),
+    ANIMCMD_FRAME(3, 8),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd *const sAnimTable_JumpSnowGrass[] =
+{
+    sAnim_JumpSnowGrass,
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_JumpSnowGrass = {
+    .tileTag = 0xFFFF,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_1,
+    .oam = &gObjectEventBaseOam_16x8,
+    .anims = sAnimTable_JumpSnowGrass,
+    .images = sPicTable_JumpSnowGrass,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = UpdateJumpImpactEffect,
+};
+
 static const struct SpritePalette sSpritePalette_Unused = {gObjectEventPal_Npc3, FLDEFF_PAL_TAG_UNKNOWN};
