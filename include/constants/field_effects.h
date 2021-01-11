@@ -48,8 +48,8 @@
 #define FLDEFF_USE_DIVE                  44
 #define FLDEFF_POKEBALL                  45
 #define FLDEFF_HEART_ICON                46
-#define FLDEFF_NOP_47                    47
-#define FLDEFF_NOP_48                    48
+#define FLDEFF_SNOW_GRASS                47
+#define FLDEFF_JUMP_SNOW_GRASS           48
 #define FLDEFF_ASH_PUFF                  49
 #define FLDEFF_ASH_LAUNCH                50
 #define FLDEFF_SWEET_SCENT               51
@@ -106,6 +106,8 @@
 #define FLDEFFOBJ_BUBBLES               34
 #define FLDEFFOBJ_SMALL_SPARKLE         35
 #define FLDEFFOBJ_RAYQUAZA              36
+#define FLDEFFOBJ_SNOW_GRASS            37
+#define FLDEFFOBJ_JUMP_SNOW_GRASS       38
 
 #define FLDEFF_PAL_TAG_CUT_GRASS          0x1000
 #define FLDEFF_PAL_TAG_SECRET_POWER_TREE  0x1003
